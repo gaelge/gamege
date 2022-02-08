@@ -6,12 +6,14 @@ pipeline {
     stage('Git') {
       steps {
         // 
+        sh 'ls'
       }
     }
      
     stage('Build') {
       steps {
         // 
+        sh 'ls'
       }
     }  
     
@@ -19,6 +21,7 @@ pipeline {
     stage('Test') {
       steps {
         // 
+        sh 'ls'
       }
     }
   }
