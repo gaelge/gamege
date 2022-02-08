@@ -7,7 +7,7 @@ pipeline {
         
     stage('Git') {
       steps {
-        git 'https://github.com/gaelge/gamege'
+        git clone 'https://github.com/gaelge/gamege'
       }
     }
      
