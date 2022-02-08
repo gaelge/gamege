@@ -27,7 +27,7 @@ pipeline {
     stage('DockerHub') {
       steps {
         // Publication sur le docker hub
-        sh 'docker push gaelge/gamege:1.0.0'
+        sh 'docker push gaelge/gamege:2.0.0'
       }
     }
 
