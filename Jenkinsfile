@@ -2,23 +2,22 @@ pipeline {
   agent any
     
   stages {
-        
-    stage('Git') {
-      steps {
-        // 
-        sh 'ls'
-      }
-    }
-     
+
     stage('Build') {
       steps {
         // 
-        sh 'ls'
+        sh 'npm i'
       }
     }  
     
-            
     stage('Test') {
+      steps {
+        // 
+        sh 'npm run test'
+      }
+    }
+
+    stage('Deployment on minikube') {
       steps {
         // 
         sh 'ls'
