@@ -17,10 +17,24 @@ pipeline {
       }
     }
 
-    stage('Deployment on minikube') {
+    stage('Docker') {
       steps {
         // 
-        sh 'ls'
+        sh 'docker build -t gaelge/gamege:1.0.0 .'
+      }
+    }
+
+    stage('DockerHub') {
+      steps {
+        // 
+        sh 'docker push gaelge/gamege:1.0.0'
+      }
+    }
+
+    stage('Kubernetes') {
+      steps {
+        // 
+        sh 'kubectl create deployment my-game --image=gaelge/gamege:1.0.0'
       }
     }
   }
