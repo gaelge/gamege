@@ -1,0 +1,21 @@
+{
+  "name": "gamege",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "test": "jest --detectOpenHandles"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "lodash": "^4.17.21",
+    "prompt": "^1.2.1"
+  },
+  "devDependencies": {
+    "jest": "^27.5.0",
+    "typescript": "^4.5.5"
+  }
+}
