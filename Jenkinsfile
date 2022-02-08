@@ -5,36 +5,46 @@ pipeline {
 
     stage('Build') {
       steps {
-        // 
+        // Construction
         sh 'npm i'
       }
     }  
     
     stage('Test') {
       steps {
-        // 
+        // Testing
         sh 'npm run test'
       }
     }
 
     stage('Docker') {
       steps {
-        // 
-        sh 'docker build -t gaelge/gamege:1.0.0 .'
+        // Création de l'image docker
+        sh 'npm run test'
+        sh 'npm run test'
       }
     }
 
     stage('DockerHub') {
       steps {
-        // 
-        sh 'docker push gaelge/gamege:1.0.0'
+        // Publication sur le docker hub
+        sh 'npm run test'
+        sh 'npm run test'
+        sh 'npm run test'
+        sh 'npm run test'
+        sh 'npm run test'
+        sh 'npm run test'
+        sh 'npm run test'
       }
     }
 
     stage('Kubernetes') {
       steps {
-        // 
-        sh 'kubectl create deployment my-game --image=gaelge/gamege:1.0.0'
+        // Déployement avec kubernetes
+        sh 'npm run test'
+        sh 'npm run test'
+        sh 'npm run test'
+        sh 'npm run test'
       }
     }
   }
